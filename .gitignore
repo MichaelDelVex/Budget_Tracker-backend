@@ -1,15 +1,5 @@
-# Node
 node_modules/
-npm-debug.log*
-yarn.lock
-pnpm-lock.yaml
-
-# Local data (bank CSVs, generated files)
-data/*
-!data/.gitkeep
-
-# OS / editor junk
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+data/
+dist/
+db/
+*.log
