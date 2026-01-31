@@ -1,6 +1,5 @@
 import { Router } from "express";
-import { getAllAccountIds } from "../queries/accounts";
-import { getTransactionsForAccount } from "../queries/transactions";
+import { getAllTransactions, getTransactionsForAccount} from "../queries/transactions";
 
 const router = Router();
 
@@ -10,7 +9,7 @@ const router = Router();
  */
 router.get("/", (req, res) => {
   try {
-    const accounts = getAllAccountIds();
+    const accounts = getAllTransactions();
     res.json(accounts);
   } catch (err: any) {
     res.status(500).json({ error: err.message });
